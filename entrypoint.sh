@@ -1,7 +1,7 @@
 #!/bin/sh -l
 echo "====="
 ls $env
-
+cat $env
 
 echo "======================="
 
