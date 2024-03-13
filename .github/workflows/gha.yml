@@ -19,6 +19,7 @@ jobs:
       run: |
         echo "test=a" >> $env.GITHUB_OUTPUT
         echo "env=b" >> $GITHUB_ENV
+        echo "test=a" >> $GITHUB_ENV
         echo "--"
         cat $GITHUB_OUTPUT
         echo "test"
