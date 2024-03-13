@@ -1,6 +1,6 @@
 #!/bin/sh -l
 echo "====="
-echo $GITHUB_OUTPUTS
+ls $env
 
 
 echo "======================="
