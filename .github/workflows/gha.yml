@@ -21,7 +21,7 @@ jobs:
     #     location: 'us-central1-c'
 
     - name: 'deploy with gke-deploy cli'
-      uses: JeromeJu/container-output-test@v0.8
+      uses: JeromeJu/container-output-test@v0.9
 
       with:
         image: "busybox:latest"
