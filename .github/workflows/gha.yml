@@ -15,9 +15,9 @@ jobs:
 
     - id: 'test'
       shell: bash
-      run:
+      run: |
         echo "test=a" >> $env.GITHUB_OUTPUT
-        echo "test=b" >> $GITHUB_OUTPUT
+        echo "env=b" >> $GITHUB_OUTPUT
         echo "--"
         echo $GITHUB_OUTPUT
         echo "test"
