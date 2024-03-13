@@ -12,17 +12,11 @@ jobs:
       uses: 'google-github-actions/auth@v2'
       with:
         workload_identity_provider: 'projects/306223470399/locations/global/workloadIdentityPools/github/providers/prototype-repo'
-        export_environment_variables: false
 
-    - id: 'test'
-      shell: bash
-      run: |
-        echo "test=a" >> $env.GITHUB_OUTPUT
-        echo "env=b" >> $GITHUB_ENV
-        echo "test=a" >> $GITHUB_ENV
-        echo "--"
-        cat $GITHUB_OUTPUT
-        echo "test"
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v2'
+      with:
+        version: '>= 363.0.0'
 
     # - id: 'get-credentials'
     #   uses: 'google-github-actions/get-gke-credentials@v2'

@@ -1,8 +1,5 @@
 #!/bin/sh -l
-echo $env.GITHUB_OUTPUTS
-echo $GITHUB_OUTPUTS
-ls $env
-echo $env
+gcloud -h
 
 echo "======================="
 
