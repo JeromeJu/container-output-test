@@ -19,7 +19,7 @@ jobs:
         echo "test=a" >> $env.GITHUB_OUTPUT
         echo "env=b" >> $GITHUB_OUTPUT
         echo "--"
-        echo $GITHUB_OUTPUT.env
+        cat $GITHUB_OUTPUT
         echo "test"
 
     # - id: 'get-credentials'
