@@ -1,6 +1,6 @@
 #!/bin/sh -l
 echo $env.GITHUB_OUTPUTS
-
+echo $GITHUB_OUTPUTS
 ls $env
 
 image="$1"
