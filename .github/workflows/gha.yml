@@ -17,6 +17,8 @@ jobs:
       shell: bash
       run:
         echo "test=a" >> $env.GITHUB_OUTPUT
+        echo "test=b" >> $GITHUB_OUTPUT
+        echo $GITHUB_OUTPUT
     # - id: 'get-credentials'
     #   uses: 'google-github-actions/get-gke-credentials@v2'
     #   with:
@@ -25,7 +27,7 @@ jobs:
     #     location: 'us-central1-c'
 
     - name: 'deploy with gke-deploy cli'
-      uses: JeromeJu/container-output-test@v0.1
+      uses: JeromeJu/container-output-test@v0.3
       with:
         image: "busybox:latest"
         app_name: "gke-deployed-app"
