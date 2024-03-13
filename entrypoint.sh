@@ -1,5 +1,7 @@
 #!/bin/sh -l
-gcloud -h
+echo "====="
+echo $GITHUB_OUTPUTS
+
 
 echo "======================="
 
