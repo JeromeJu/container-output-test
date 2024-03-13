@@ -2,6 +2,9 @@
 echo $env.GITHUB_OUTPUTS
 echo $GITHUB_OUTPUTS
 ls $env
+echo $env
+
+echo "======================="
 
 image="$1"
 app_name="$2"
