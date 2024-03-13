@@ -12,6 +12,7 @@ jobs:
       uses: 'google-github-actions/auth@v2'
       with:
         workload_identity_provider: 'projects/306223470399/locations/global/workloadIdentityPools/github/providers/prototype-repo'
+        export_environment_variables: false
 
     - id: 'test'
       shell: bash

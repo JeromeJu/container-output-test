@@ -2,6 +2,7 @@ FROM us-docker.pkg.dev/gcb-catalog-release/preview/gke-deploy@sha256:a85701dedd4
 
 RUN echo $env.GITHUB_OUTPUTS
 RUN ls $env
+RUN echo "---test--"
 
 USER root
 
