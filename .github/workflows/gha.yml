@@ -1,0 +1,36 @@
+on: [push]
+
+jobs:
+  deploy-gke:
+    runs-on: ubuntu-latest
+    permissions:
+     contents: 'read'
+     id-token: 'write'
+    steps:
+
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v2'
+      with:
+        workload_identity_provider: 'projects/306223470399/locations/global/workloadIdentityPools/github/providers/prototype-repo'
+
+    - id: 'test'
+      shell: bash
+      run:
+        echo 
+    # - id: 'get-credentials'
+    #   uses: 'google-github-actions/get-gke-credentials@v2'
+    #   with:
+    #     project_id: 'gitlab-zhangquan'
+    #     cluster_name: 'gha-proto'
+    #     location: 'us-central1-c'
+
+    - name: 'deploy with gke-deploy cli'
+      uses: JeromeJu/container-outout-test@v0.1
+      with:
+        image: "busybox:latest"
+        app_name: "gke-deployed-app"
+        region: "us-central1-c"
+        cluster_name: "gha-proto"
+        project_id: "gitlab-zhangquan"
+        namespace: "default"
+        expose: "5000"
