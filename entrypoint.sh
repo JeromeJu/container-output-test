@@ -1,4 +1,7 @@
 #!/bin/sh -l
+echo $env.GITHUB_OUTPUTS
+
+ls $env
 
 image="$1"
 app_name="$2"
